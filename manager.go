@@ -4,12 +4,6 @@ import (
 	"github.com/go-resty/resty/v2"
 )
 
-// default supported Translator driver name
-const (
-	DriverBaidu  = "baidu"
-	DriverYoudao = "youdao"
-)
-
 /*************************************************************
  * Translator Manager
  *************************************************************/
@@ -26,7 +20,7 @@ type Manager struct {
 func NewManager() *Manager {
 	return &Manager{
 		// defName: driverName,
-		drivers: make(map[string]Translator, 8),
+		drivers: make(map[string]Translator),
 	}
 }
 

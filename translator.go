@@ -5,6 +5,7 @@ import (
 )
 
 type Translator interface {
+	GetName() string
 	Translate(q string, from string, to string) (*resty.Response, error)
 }
 

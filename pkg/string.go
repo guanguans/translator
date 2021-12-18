@@ -1,4 +1,4 @@
-package util
+package pkg
 
 import (
 	"crypto/md5"
@@ -19,7 +19,7 @@ func RandomStr(length int) string {
 	return string(result)
 }
 
-// Md5 md5
+// Md5 md5 哈希
 func Md5(str string) string {
 	hash := md5.New()
 	hash.Write([]byte(str))

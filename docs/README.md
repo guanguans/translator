@@ -1,8 +1,8 @@
-# go-translator
+# translator
 
-[ENGLISH](README.md) | [简体中文](README-zh_CN.md)
+[ENGLISH](README-EN.md) | [简体中文](README.md)
 
-> A Go package template repository. - 一个 Go 软件包模板存储库。
+> Translation SDK(baidu、youdao). - 翻译 SDK(百度翻译、有道翻译)。
 
 [![tests](https://github.com/guanguans/translator/workflows/tests/badge.svg)](https://github.com/guanguans/translator/actions)
 [![gocover.io](https://gocover.io/_badge/github.com/guanguans/translator)](https://gocover.io/github.com/guanguans/translator)
@@ -15,17 +15,14 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/guanguans/translator)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/translator)
 
-## 功能
+## 平台支持
 
-* package template
-
-## 环境要求
-
-* Go >= 1.11
+* [百度翻译](http://api.fanyi.baidu.com/api/trans/product/apidoc)
+* [有道翻译](http://ai.youdao.com/docs/doc-trans-api.s#p02)
 
 ## 安装
 
-``` shell script
+```shell script
 $ go get -u github.com/guanguans/translator
 ```
 
@@ -35,22 +32,24 @@ $ go get -u github.com/guanguans/translator
 
 让我们从一个简单的例子开始：
 
-``` go
+```go
 package main
 
 import (
-	"github.com/guanguans/translator"
-	"gopkg.in/ffmt.v1"
+    "github.com/davecgh/go-spew/spew"
+    "github.com/guanguans/translator/driver/baidu"
+    "github.com/guanguans/translator/driver/youdao"
 )
 
 func main() {
-	ffmt.P(translator.ReturnSelf("go-translator"))
+    spew.Dump(baidu.New("appid", "appSecret").Translate("你好", "zh", "en"))
+    spew.Dump(youdao.New("appid", "appSecret").Translate("你好", "zh-CHS", "en"))
 }
 ```
 
 ## 测试
 
-``` bash
+```shell script
 $ make test
 $ make bench
 ```

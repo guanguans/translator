@@ -15,22 +15,22 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/guanguans/translator)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/guanguans/translator)
 
-## 平台支持
+## Platform
 
-* [百度翻译](http://api.fanyi.baidu.com/api/trans/product/apidoc)
-* [有道翻译](http://ai.youdao.com/docs/doc-trans-api.s#p02)
+* [baidu](http://api.fanyi.baidu.com/api/trans/product/apidoc)
+* [youdao](http://ai.youdao.com/docs/doc-trans-api.s#p02)
 
-## 安装
+## Installation
 
 ```shell script
 $ go get -u github.com/guanguans/translator
 ```
 
-## 使用
+## Usage
 
-这只是一个快速介绍, 请查看 [GoDoc](https://godoc.org/github.com/guanguans/translator) 获得详细信息。
+This is just a quick introduction, view the [GoDoc](https://godoc.org/github.com/guanguans/translator) for details.
 
-让我们从一个简单的例子开始：
+Let's start with a trivial example:
 
 ```go
 package main
@@ -47,30 +47,30 @@ func main() {
 }
 ```
 
-## 测试
+## Testing
 
 ```shell script
 $ make test
 $ make bench
 ```
 
-## 变更日志
+## Changelog
 
-请参阅 [CHANGELOG](CHANGELOG.md) 获取最近有关更改的更多信息。
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## 贡献指南
+## Contributing
 
-请参阅 [CONTRIBUTING](.github/CONTRIBUTING.md) 有关详细信息。
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## 安全漏洞
+## Security Vulnerabilities
 
-请查看[我们的安全政策](../../security/policy)了解如何报告安全漏洞。
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-## 贡献者
+## Credits
 
 * [guanguans](https://github.com/guanguans)
-* [所有贡献者](../../contributors)
+* [All Contributors](../../contributors)
 
-## 协议
+## License
 
-MIT 许可证（MIT）。有关更多信息，请参见[协议文件](LICENSE)。
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

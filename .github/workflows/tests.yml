@@ -31,7 +31,7 @@ jobs:
           go test -v -race -coverprofile=coverage -covermode=atomic ./...
           curl --location --request GET 'https://gocover.io/github.com/guanguans/translator'
       - name: Upload coverage report to Codecov
-        uses: codecov/codecov-action@v2.1.0
+        uses: codecov/codecov-action@v3
         with:
           file: ./coverage
           flags: unittests

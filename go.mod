@@ -4,5 +4,5 @@ go 1.14
 
 require (
 	github.com/davecgh/go-spew v1.1.1
-	github.com/go-resty/resty/v2 v2.8.0
+	github.com/go-resty/resty/v2 v2.9.1
 )
